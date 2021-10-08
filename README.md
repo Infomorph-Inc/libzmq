@@ -118,14 +118,6 @@ For Linux users, pre-built binary packages are available for most distributions.
 Note that DRAFT APIs can change at any time without warning, pick a STABLE build to
 avoid having them enabled.
 
-### MacOS
-```bash
-mkdir build
-cd build
-cmake -DWITH_TLS=OFF -DCMAKE_BUILD_TYPE=Release ..
-cmake --build .
-```
-
 #### Latest releases
 
 ##### DEB
@@ -170,6 +162,14 @@ To build from sources, see the INSTALL file included with the distribution.
 
 To build from source, see [README](./builds/android/README.md) file in the
 android build directory.
+
+### MacOS
+```bash
+mkdir build
+cd build
+cmake -DWITH_TLS=OFF -DCMAKE_BUILD_TYPE=Release ..
+cmake --build .
+```
 
 ## Resources
 
