@@ -118,6 +118,14 @@ For Linux users, pre-built binary packages are available for most distributions.
 Note that DRAFT APIs can change at any time without warning, pick a STABLE build to
 avoid having them enabled.
 
+### MacOS
+```bash
+mkdir build
+cd build
+cmake -DWITH_TLS=OFF -DCMAKE_BUILD_TYPE=Release ..
+cmake --build .
+```
+
 #### Latest releases
 
 ##### DEB
