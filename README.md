@@ -163,11 +163,16 @@ To build from sources, see the INSTALL file included with the distribution.
 To build from source, see [README](./builds/android/README.md) file in the
 android build directory.
 
-### MacOS
+### MacOS (Build Universal Binary)
+
+* Avoid using libsodium in the system which depends on the system arch (WITH_LIBSODIUM=OFF). 
+* Make universal binary (CMAKE_OSX_ARCHITECTURES="arm64;x86_64")
+* Make Release build (CMAKE_BUILD_TYPE=Release)
+
 ```bash
 mkdir build
 cd build
-cmake -DWITH_TLS=OFF -DCMAKE_BUILD_TYPE=Release ..
+cmake -DWITH_TLS=OFF -DWITH_LIBSODIUM=OFF -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
 
